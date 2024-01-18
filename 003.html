@@ -19,8 +19,8 @@
       <div class="white-bg">
         <h4>로그인하세요</h4>
         <form action="success.html">
-          <input type="text">
-          <input type="text">
+          <input type="text" id="email">
+          <input type="text" id="pw">
           <button type="submit" id="send">전송</button>
         </form>
         <button type="button" class="btn btn-danger" id="close1">닫기</button>
@@ -54,6 +54,8 @@
       <div class="test"></div>
       
 
+    
+
     <script>
 
       $('#login').on('click', function(){
@@ -77,9 +79,16 @@
 
     <script>
 
-      $('#send').on('click', function(){
-        
-      })
+      
+
+      $('form').on('submit', function(){
+        if(document.getElementById('email').value == ''){
+          alert('아이디를입력하시오')
+        }
+        else if(document.getElementById('pw').value == ''){
+          alert('비밀번호를입력하시오')
+        }
+      });
 
     </script>
 
