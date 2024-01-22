@@ -12,7 +12,9 @@
   </head>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <body>
+  <body class="dark">
+
+    
 
     <!-- modal -->
     <div class="black-bg show-class">
@@ -30,6 +32,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
+          <span class="badge bg-dark">Dark 🔄</span>
           <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -53,6 +56,29 @@
 
       <div class="test"></div>
       
+      <script>
+
+        let count = 0;
+        
+
+
+        $('.badge').on('click', function(){
+          count = count + 1;
+          // console.log(count)
+
+          if(count % 2 == 1){
+            $('.badge').html('Light🔄')
+          } else{
+            $('.badge').html('Dark🔄'){
+              $('body').addClass('.dark')
+            }
+          }
+          
+        })
+
+        
+
+      </script>
 
     
 
@@ -87,6 +113,10 @@
         }
         else if(document.getElementById('pw').value == ''){
           alert('비밀번호를입력하시오')
+        }
+
+        else if(document.getElementById('pw').value.length < 6 ){
+          alert('비말번호6자리이상')  
         }
       });
 

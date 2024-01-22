@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./005.css">
+    
+</head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<body>
+    
+    <div class="alert alert-danger">
+        5초이내 상품 구매
+    </div>
+
+    <script>
+
+        var count = 5;
+
+        setInterval(function(){
+            count -= 1;
+            if (count => 0){
+                document.querySelector('.alert').classList.add('hide')
+            }
+        },3000)
+
+    </script>
+
+</body>
+</html>
