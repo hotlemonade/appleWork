@@ -14,6 +14,33 @@
         5초이내 상품 구매
     </div>
 
+    <div class="hidden">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="./img/car1.png" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="./img/car2.png" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="./img/car3.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <button class="slide1">1</button>
+    <button class="slide2">2</button>
+    <button class="slide3">3</button>
+
+    <script>
+
+        $('.slide2').on('click',function(){
+            $('.slide-container').css('transform', 'translateX(-100vw)');
+        })
+
+    </script>
+    
+
     <script>
 
         var count = 5;

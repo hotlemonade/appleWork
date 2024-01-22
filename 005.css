@@ -1,3 +1,23 @@
 .hide{
     display: none;
 }
+
+.hidden{
+    overflow-x: hidden;
+}
+
+.slide-container{
+    width: 300vw;
+    display: flex;
+    transition: all 1s;
+    
+}
+
+.slide-container .slide-box{
+    width: 100vw;
+    justify-content: left;
+}
+
+.slide-container .slide-box img{
+    width: 100%;
+}
