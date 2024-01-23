@@ -13,6 +13,18 @@
     <div class="alert alert-danger">
         5초이내 상품 구매
     </div>
+    
+    <nav>
+        <h1 class="logo">
+            로고
+        </h1>
+
+        <ul>
+            <li>안녕하세요</li>
+            <li>반가워요</li>
+            <li>또만나요</li>
+        </ul>
+    </nav>
 
     <div class="hidden">
         <div class="slide-container">
@@ -31,18 +43,55 @@
     <button class="slide1">1</button>
     <button class="slide2">2</button>
     <button class="slide3">3</button>
+    <button class="next">다음</button>
+
+
+    <div class="height"></div>
 
     <script>
 
+        $(window).on('scroll',function(){
+            if( window.scrollY > 100){
+            $('.logo').css('font-size','20px')
+            }else{
+                $('.logo').css('font-size','50px')
+            }
+        })
+        
+
+    </script>
+
+    <script>
+
+        let photo = 1;
+
+        $('.next').on('click', function(){
+            if( photo == 1 ){
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                photo += 1 ;
+            }else if( photo == 2 ){
+                $('.slide-container').css('transform', 'translateX(-200vw)');
+                photo += 1 ;
+            }
+        });
+
+        $('.slide1').on('click',function(){
+            $('.slide-container').css('transform','translateX(0vw)')
+        });
+
         $('.slide2').on('click',function(){
             $('.slide-container').css('transform', 'translateX(-100vw)');
+        });
+
+        $('.slide3').on('click',function(){
+            $('.slide-container').css('transform', 'translateX(-200vw)');
         })
 
     </script>
     
 
     <script>
-
+ 
         var count = 5;
 
         setInterval(function(){
@@ -51,6 +100,25 @@
                 document.querySelector('.alert').classList.add('hide')
             }
         },3000)
+
+    </script>
+
+    <script>
+
+    // 함수에 x 1000을 해주는 함수를 만들면 된다.
+
+    function ms(a){
+        return a * 1000
+    };
+    
+
+    function discount(a){
+        return a * 0.1
+    };
+
+    console.log(ms(3))
+    console.log(discount(50000))
+    
 
     </script>
 

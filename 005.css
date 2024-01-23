@@ -1,3 +1,6 @@
+
+
+
 .hide{
     display: none;
 }
@@ -20,4 +23,38 @@
 
 .slide-container .slide-box img{
     width: 100%;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    height: 100px;
+    outline: 1px solid red;
+    width: 100vw;
+    display: flex;
+    background-color: antiquewhite;
+    z-index: 5;
+    
+}
+
+
+nav .logo {
+    font-size: 50px;
+    transition: all 1s;
+}
+
+nav ul{
+    display: flex;
+    justify-content: right;
+    width: 100vw
+    
+    
+}
+
+nav ul li{
+    flex-basis: 100px;
+}
+
+.height{
+    height: 3000px;
 }
