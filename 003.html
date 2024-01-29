@@ -69,7 +69,7 @@
           if(count % 2 == 1){
             $('.badge').html('Light🔄')
           } else{
-            $('.badge').html('Dark🔄'){
+            {
               $('body').addClass('.dark')
             }
           }
@@ -90,6 +90,17 @@
 
       document.getElementById('close1').addEventListener('click', function(){
         document.querySelector('.black-bg').classList.remove('show-modal')
+      });
+      
+
+
+
+      document.querySelector('.black-bg').addEventListener('click',function(e){
+
+        if(e.target == document.querySelector('.black-bg')){
+          document.querySelector('.black-bg').classList.remove('show-modal')
+        }
+        
       })
 
     </script>
